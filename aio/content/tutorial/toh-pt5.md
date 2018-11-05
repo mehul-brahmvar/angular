@@ -28,6 +28,21 @@ Use the CLI to generate it.
   ng generate module app-routing --flat --module=app
 </code-example>
 
+In angular 7, when I tried to create a module using above command. It says, already exists. I could it was there with below structure. Please update this page, if needed.
+
+<code-example language="sh" class="code-shell">
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+
+const routes: Routes = [];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
+</code-example>
+
 <div class="alert is-helpful">
 
 `--flat` puts the file in `src/app` instead of its own folder.<br>
